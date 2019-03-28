@@ -15,7 +15,7 @@
 						<p><%= a.task.description  %></p>
 						
 						<% if  a.complete == false %>
-							<%= link_to "No realizada", "#" , class: "btn btn-success", method: :post %>
+							<%= link_to "No realizada", task_assigment_path(a.task.id, a.id), class: "btn btn-success", method: :patch %>
 						<% else %>
 							<%= link_to "Listo", "#" , class: "btn btn-success" %>
 						<% end %>

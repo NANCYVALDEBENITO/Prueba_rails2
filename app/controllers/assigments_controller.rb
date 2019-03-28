@@ -17,6 +17,11 @@ class AssigmentsController < ApplicationController
 		
 	end
 	def update
+
+		current_user.assigments.find(params[:id]).update(complete:true)
+		
+		redirect_to root_path
+		
 	end
 
 
