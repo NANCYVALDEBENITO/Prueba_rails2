@@ -1,0 +1,24 @@
+<h1>Tasks#index</h1>
+<p>Find me in app/views/tasks/index.html.erb</p>
+<div class="container">
+	<div class="row">
+		<% @tasks.each_slice(3) do |row| %>
+			<% row.each do |task| %>
+			<div class="col">
+				<div class="card" >
+					<%= image_tag task.photo, :size => "200x200", class: 'card-img-top img-thumbnail' %>
+					<div class="body">		
+					    <h1><%= task.name %></h1>
+
+						<p><%= task.description %></p>
+						  <%= link_to "No realizada", task_assigments_path(task) , class: "btn btn-success", method: :post %>
+						
+					</div>
+				</div>
+			</div>
+
+			<% end %>	
+			<div class="w-100" style="margin:20px" ></div>
+		<% end %>
+	</div>
+</div>

@@ -1,0 +1,9 @@
+
+
+
+<% @assigments.each do |a| %>
+	<p><%= a.task.name  %></p>
+	<p><%= a.task.description  %></p>
+	<%= image_tag a.task.photo %>
+	<p><%= a.complete  %></p>
+<% end %>
