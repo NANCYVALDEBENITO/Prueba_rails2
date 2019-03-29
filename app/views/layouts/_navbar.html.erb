@@ -8,16 +8,20 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Brand</a>
+      <a class="navbar-brand" href="#"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <% if user_signed_in? %>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
+          <li><a href=""><%= image_tag current_user.avatar,  :size => "40x40", class: 'card-img-top img-thumbnail' %></a></li>
+          <li><a href="#" ><%= current_user.name %><span class="sr-only"></span></a></li>
+          <li><a href="<%= destroy_user_session_path %>" data-method="DELETE">LOG OUT<span class="sr-only">(current)</span></a></li>
+          <li><a href="<%= root_path%>"> TAREAS</a></li>
+          <li><a href="<%= assigments_tasks_list_path%>">  MIS TAREAS</a></li>
+          
 
-          <li class="active"><a href="<%= destroy_user_session_path %>" data-method="DELETE">Log out<span class="sr-only">(current)</span></a></li>
-          <li><a href="#">Link</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
               <%= current_user.assigments.group(:complete).count.map{|k,v| v}[1]%><span class="caret"></span></a>
@@ -39,7 +43,7 @@
         <ul class="nav navbar-nav">
 
           
-          <li><a href="#">Link</a></li>
+          <li><a href="<%=root_path%>">TAREAS</a></li>
         </ul>
       </div>
     <% end %>

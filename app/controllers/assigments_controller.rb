@@ -13,12 +13,15 @@ class AssigmentsController < ApplicationController
 
 	def index
 		@assigments = current_user.assigments
-		
+	
+
 		
 	end
 
 	def tasks_list
-		@assigments = current_user.assigments
+		@assigments = Assigment.all
+		
+		@tasks = Task.all
 	end
 	def update
 		
