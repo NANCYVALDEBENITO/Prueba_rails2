@@ -1,0 +1,5 @@
+<% @assigments.each do |a| %>
+	<%= image_tag a.user.avatar , :size => "200x200" %>
+	<%= a.user.name %>
+	<h1><%= a.task.name  %></h1>
+<%end%>

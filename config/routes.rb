@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   	resources :assigments, only: [:create, :update]
   end
   root to: 'assigments#index'
+  get 'assigments/tasks_list'
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 

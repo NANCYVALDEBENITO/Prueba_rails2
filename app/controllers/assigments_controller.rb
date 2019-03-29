@@ -16,13 +16,22 @@ class AssigmentsController < ApplicationController
 		
 		
 	end
-	def update
 
-		current_user.assigments.find(params[:id]).update(complete:true)
-		
-		redirect_to root_path
-		
+	def tasks_list
+		@assigments = current_user.assigments
 	end
+	def update
+		
+		if current_user.assigments.find(params[:id]).complete == false
+			current_user.assigments.find(params[:id]).update(complete:true)
+			redirect_to root_path
+		else 
+			current_user.assigments.find(params[:id]).update(complete:false)
+			redirect_to root_path
+		end
+				
+	end
+
 
 
 end
