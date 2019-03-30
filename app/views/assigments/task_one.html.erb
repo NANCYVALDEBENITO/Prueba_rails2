@@ -8,3 +8,12 @@
 <%end%>
 <br>
 
+<br>
+<h1> <%= @assigments.find_by(:task_id=>"1").task.name %></h1>
+<% @users.each do |u| %>
+	<% if @assigments.find_by(:task_id=>"1", :user_id=>u.id).complete == true %>
+		 <li><%= @assigments.find_by(:task_id=>"1", :user_id=>u.id).user.name %></li> 
+	<%end%>
+<%end%>
+<br>
+

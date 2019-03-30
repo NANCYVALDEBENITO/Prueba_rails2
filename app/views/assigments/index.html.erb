@@ -17,12 +17,44 @@
 							<%= link_to "No realizada", task_assigment_path(a.task.id, a.id), class: "btn btn-danger", method: :patch %>
 							<% if a.task.id == 1 %>
 								<%= link_to "¿quién la ha completado?", assigments_task_one_path, class:"btn btn-info"%> 
+							<% elsif a.task.id == 2 %>
+								<%= link_to "¿quién la ha completado?", assigments_task_two_path, class:"btn btn-info"%>
+							<% elsif a.task.id == 3 %>
+								<%= link_to "¿quién la ha completado?", assigments_task_three_path, class:"btn btn-info"%>
+							<% elsif a.task.id == 4 %>
+								<%= link_to "¿quién la ha completado?", assigments_task_four_path, class:"btn btn-info"%>
+							<% elsif a.task.id == 5 %>
+								<%= link_to "¿quién la ha completado?", assigments_task_five_path, class:"btn btn-info"%>
+							<% elsif a.task.id == 6 %>
+								<%= link_to "¿quién la ha completado?", assigments_task_six_path, class:"btn btn-info"%>
+							<% elsif a.task.id == 7 %>
+								<%= link_to "¿quién la ha completado?", assigments_task_seven_path, class:"btn btn-info"%>
+							<% elsif a.task.id == 8 %>
+								<%= link_to "¿quién la ha completado?", assigments_task_eigth_path, class:"btn btn-info"%>
+							<% elsif a.task.id == 9 %>
+								<%= link_to "¿quién la ha completado?", assigments_task_nine_path, class:"btn btn-info"%>
 							<%end%>
 						<% else %>
 								
 							<%= link_to "Listo", task_assigment_path(a.task.id, a.id), class: "btn btn-success", method: :patch %>
 							<% if a.task.id == 1 %>
 								<%= link_to "¿quién la ha completado?", assigments_task_one_path, class:"btn btn-info"%> 
+							<% elsif a.task.id == 2 %>
+								<%= link_to "¿quién la ha completado?", assigments_task_two_path, class:"btn btn-info"%>
+							<% elsif a.task.id == 3 %>
+								<%= link_to "¿quién la ha completado?", assigments_task_three_path, class:"btn btn-info"%>
+							<% elsif a.task.id == 4 %>
+								<%= link_to "¿quién la ha completado?", assigments_task_four_path, class:"btn btn-info"%>
+							<% elsif a.task.id == 5 %>
+								<%= link_to "¿quién la ha completado?", assigments_task_five_path, class:"btn btn-info"%>
+							<% elsif a.task.id == 6 %>
+								<%= link_to "¿quién la ha completado?", assigments_task_six_path, class:"btn btn-info"%>
+							<% elsif a.task.id == 7 %>
+								<%= link_to "¿quién la ha completado?", assigments_task_seven_path, class:"btn btn-info"%>
+							<% elsif a.task.id == 8 %>
+								<%= link_to "¿quién la ha completado?", assigments_task_eigth_path, class:"btn btn-info"%>
+							<% elsif a.task.id == 9 %>
+								<%= link_to "¿quién la ha completado?", assigments_task_nine_path, class:"btn btn-info"%>
 							<%end%>
 						<% end %>
 					</div>

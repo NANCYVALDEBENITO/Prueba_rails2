@@ -1,0 +1,19 @@
+<br>
+<h1> <%= @assigments.find_by(:task_id=>"8").task.name %></h1>
+<% @users.each do |u| %>
+	<% if @assigments.find_by(:task_id=>"8", :user_id=>u.id).complete == true %>
+		 <li><%= @assigments.find_by(:task_id=>"8", :user_id=>u.id).user.name %></li> 
+		 <li><%= image_tag @assigments.find_by(:task_id=>"8", :user_id=>u.id).user.avatar  , :size => "100x100" %></li>
+	<%end%>
+<%end%>
+<br>
+
+
+<br>
+<h1> <%= @assigments.find_by(:task_id=>"8").task.name %></h1>
+<% @users.each do |u| %>
+	<% if @assigments.find_by(:task_id=>"8", :user_id=>u.id).complete == true %>
+		 <li><%= @assigments.find_by(:task_id=>"8", :user_id=>u.id).user.name %></li> 
+	<%end%>
+<%end%>
+<br>

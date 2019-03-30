@@ -29,7 +29,46 @@ class AssigmentsController < ApplicationController
 		@users = User.all
 		@tasks = Task.all
 	end
-
+	def task_two
+		@assigments = Assigment.all
+		@users = User.all
+		@tasks = Task.all
+	end
+	def task_three
+		@assigments = Assigment.all
+		@users = User.all
+		@tasks = Task.all
+	end
+	def task_four
+		@assigments = Assigment.all
+		@users = User.all
+		@tasks = Task.all
+	end
+	def task_five
+		@assigments = Assigment.all
+		@users = User.all
+		@tasks = Task.all
+	end
+	def task_six
+		@assigments = Assigment.all
+		@users = User.all
+		@tasks = Task.all
+	end
+	def task_seven
+		@assigments = Assigment.all
+		@users = User.all
+		@tasks = Task.all
+	end
+	def task_eigth
+		@assigments = Assigment.all
+		@users = User.all
+		@tasks = Task.all
+	end
+	def task_nine
+		@assigments = Assigment.all
+		@users = User.all
+		@tasks = Task.all
+	end
 	def update
 		
 		if current_user.assigments.find(params[:id]).complete == false
