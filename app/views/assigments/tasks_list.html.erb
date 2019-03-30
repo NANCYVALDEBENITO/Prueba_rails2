@@ -1,19 +1,88 @@
-
-<h1>Comer empanadas</h1>
-<% @assigments.each do |a| %>
-	<%= a.id %>
-	<%= @assigments.sort_by { |m| [m.updated_at].max }.reverse!.take(3) %>
-	<% if a.complete = true %> 
-		<%if a.task.id = 1 %>
-			<%= a.task.name%>  
-			<ul> 
-				<%= a.user.name %>   <%= image_tag a.user.avatar , :size => "100x100" %> 
-			
-			</ul>
-		<% else %>
-			<br>
-		<% end %>
+<br>
+<h1> <%= @assigments.find_by(:task_id=>"1").task.name %></h1>
+<% @users.each do |u| %>
+	<% if @assigments.find_by(:task_id=>"1", :user_id=>u.id).complete == true %>
+		 <li><%= @assigments.find_by(:task_id=>"1", :user_id=>u.id).user.name %></li> 
+		 <li><%= image_tag @assigments.find_by(:task_id=>"1", :user_id=>u.id).user.avatar  , :size => "100x100" %></li>
+	<%end%>
+<%end%>
+<br>
+<h1> <%= @assigments.find_by(:task_id=>"2").task.name %></h1>
+<% @users.each do |u| %>
+	<% if @assigments.find_by(:task_id=>"2", :user_id=>u.id).complete == true %>
+		 <li><%= @assigments.find_by(:task_id=>"2", :user_id=>u.id).user.name %></li> 
+		 <li><%= image_tag @assigments.find_by(:task_id=>"2", :user_id=>u.id).user.avatar  , :size => "100x100" %></li>
 	<% else %>
 		<br>
-	<% end %>
+	<%end%>
+<%end%>
+<br>
+<h1> <%= @assigments.find_by(:task_id=>"3").task.name %></h1>
+<% @users.each do |u| %>
+	<% if @assigments.find_by(:task_id=>"3", :user_id=>u.id).complete == true %>
+		 <li><%= @assigments.find_by(:task_id=>"3", :user_id=>u.id).user.name %></li> 
+		 <li><%= image_tag @assigments.find_by(:task_id=>"3", :user_id=>u.id).user.avatar  , :size => "100x100" %></li>
+	<% else %>
+		<br>
+	<%end%>
+<%end%>
+<br>
+<h1> <%= @assigments.find_by(:task_id=>"4").task.name %></h1>
+<% @users.each do |u| %>
+	<% if @assigments.find_by(:task_id=>"4", :user_id=>u.id).complete == true %>
+		 <li><%= @assigments.find_by(:task_id=>"4", :user_id=>u.id).user.name %></li> 
+		 <li><%= image_tag @assigments.find_by(:task_id=>"4", :user_id=>u.id).user.avatar  , :size => "100x100" %></li>
+	<% else %>
+		<br>
+	<%end%>
+<%end%>
+<br>
+<h1> <%= @assigments.find_by(:task_id=>"5").task.name %></h1>
+<% @users.each do |u| %>
+	<%if @assigments.find_by(:task_id=>"5", :user_id=>u.id).complete == true%>
+		 <li><%= @assigments.find_by(:task_id=>"5", :user_id=>u.id).user.name %></li> 
+		 <li><%= image_tag @assigments.find_by(:task_id=>"5", :user_id=>u.id).user.avatar  , :size => "100x100" %></li>
+	<% else %>
+		<br>
+	<%end%>
+<%end%>
+<br>
+<h1> <%= @assigments.find_by(:task_id=>"6").task.name %></h1>
+<% @users.each do |u| %>
+	<%if @assigments.find_by(:task_id=>"6", :user_id=>u.id).complete == true%>
+		 <li><%= @assigments.find_by(:task_id=>"6", :user_id=>u.id).user.name %></li> 
+		 <li><%= image_tag @assigments.find_by(:task_id=>"6", :user_id=>u.id).user.avatar  , :size => "100x100" %></li>
+	<% else %>
+		<br>
+	<%end%>
+<%end%>
+<br>
+<h1> <%= @assigments.find_by(:task_id=>"7").task.name %></h1>
+<% @users.each do |u| %>
+	<% if @assigments.find_by(:task_id=>"7", :user_id=>u.id).complete == true %>
+		 <li><%= @assigments.find_by(:task_id=>"7", :user_id=>u.id).user.name %></li> 
+		 <li><%= image_tag @assigments.find_by(:task_id=>"7", :user_id=>u.id).user.avatar  , :size => "100x100" %></li>
+	<% else %>
+		<br>
+	<%end%>
+<%end%>
+<br>
+<h1> <%= @assigments.find_by(:task_id=>"8").task.name %></h1>
+<% @users.each do |u| %>
+	<% if @assigments.find_by(:task_id=>"8", :user_id=>u.id).complete == true %>
+		 <li><%= @assigments.find_by(:task_id=>"8", :user_id=>u.id).user.name %></li> 
+		 <li><%= image_tag @assigments.find_by(:task_id=>"8", :user_id=>u.id).user.avatar  , :size => "100x100" %></li>
+	<% else %>
+		<br>
+	<%end%>
+<%end%>
+<br>
+<h1> <%= @assigments.find_by(:task_id=>"9").task.name %></h1>
+<% @users.each do |u| %>
+	<% if @assigments.find_by(:task_id=>"9", :user_id=>u.id).complete == true %>
+		 <li><%= @assigments.find_by(:task_id=>"9", :user_id=>u.id).user.name %></li> 
+		 <li><%= image_tag @assigments.find_by(:task_id=>"9", :user_id=>u.id).user.avatar  , :size => "100x100" %></li>
+	<% else %>
+		<br>
+	<%end%>
 <%end%>

@@ -20,7 +20,8 @@ class AssigmentsController < ApplicationController
 
 	def tasks_list
 		@assigments = Assigment.all
-		
+		@users = User.all
+
 		@tasks = Task.all
 	end
 	def update
