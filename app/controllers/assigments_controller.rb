@@ -21,9 +21,15 @@ class AssigmentsController < ApplicationController
 	def tasks_list
 		@assigments = Assigment.all
 		@users = User.all
-
 		@tasks = Task.all
 	end
+
+	def task_one
+		@assigments = Assigment.all
+		@users = User.all
+		@tasks = Task.all
+	end
+
 	def update
 		
 		if current_user.assigments.find(params[:id]).complete == false

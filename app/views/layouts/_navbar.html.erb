@@ -22,8 +22,8 @@
           <li><a href="<%= assigments_tasks_list_path%>">  RANKING DE TAREAS</a></li>
           
 
-          <li><a href="#"> CANTIDAD DE TAREAS COMPLETADAS = 
-              <%= current_user.assigments.group(:complete).count.map{|k,v| v}[1]%></a>
+          <li><a href="#"> CANTIDAD DE TAREAS COMPLETADAS = (
+              <%= current_user.assigments.group(:complete).count.map{|k,v| v}[1]%> )</a>
             <ul class="dropdown-menu">
               <li><a href="#"><% link_to "Log out", destroy_user_session_path %></a></li>
               <li><a href="#">Another action</a></li>

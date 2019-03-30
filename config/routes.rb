@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   end
   root to: 'assigments#index'
   get 'assigments/tasks_list'
+  get 'assigments/task_one'
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
